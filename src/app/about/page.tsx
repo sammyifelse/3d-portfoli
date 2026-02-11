@@ -43,26 +43,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "somarjeetthakuria@gmail.com",
-    href: "mailto:somarjeetthakuria@gmail.com",
+    content: "naresh.khatri2345@gmail",
+    href: "mailto:naresh.khatri2345@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
-    name: "Portfolio",
-    content: "saamarjitt.netlify.app",
-    href: "https://saamarjitt.netlify.app",
+    name: "Phone",
+    content: "1234567890",
+    href: "tel:1234567890",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/samarjit-thakuria/",
-    content: "/samarjit-thakuria",
+    href: "https://www.linkedin.com/in/naresh-khatri/",
+    content: "/naresh-khatri",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/samarjit-thakuria",
-    content: "/samarjit-thakuria",
+    href: "https://github.com/Naresh-Khatri",
+    content: "/naresh-khatri",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -306,17 +306,15 @@ function Page() {
                 <Splide
                   options={{
                     type: "loop",
-                    interval: 3000,
+                    interval: 2000,
                     autoplay: true,
                     pagination: false,
-                    speed: 1000,
+                    speed: 2000,
                     perPage: 5,
                     perMove: 1,
                     rewind: true,
-                    easing: "ease",
+                    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
                     arrows: false,
-                    lazyLoad: "nearby",
-                    focus: "center",
                   }}
                   aria-label="My Favorite Images"
                 >

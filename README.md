@@ -1,6 +1,6 @@
-# 🚀 Samarjit Thakuria's Portfolio Website
+# 🚀 My Portfolio Website
 
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills in scalable backend architectures, APIs, modern web stacks, and innovative projects through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design and robust engineering, you're in the right place.
+Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design, you're in the right place.
 
 ![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
 

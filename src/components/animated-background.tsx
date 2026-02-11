@@ -112,20 +112,20 @@ const AnimatedBackground = () => {
         trigger: triggerId,
         start,
         end,
-        scrub: 0.5,
+        scrub: true,
         onEnter: () => {
           setActiveSection(targetSection);
           const state = getKeyboardState({ section: targetSection, isMobile });
-          gsap.to(kbd.scale, { ...state.scale, duration: 0.8, ease: "power2.out" });
-          gsap.to(kbd.position, { ...state.position, duration: 0.8, ease: "power2.out" });
-          gsap.to(kbd.rotation, { ...state.rotation, duration: 0.8, ease: "power2.out" });
+          gsap.to(kbd.scale, { ...state.scale, duration: 1 });
+          gsap.to(kbd.position, { ...state.position, duration: 1 });
+          gsap.to(kbd.rotation, { ...state.rotation, duration: 1 });
         },
         onLeaveBack: () => {
           setActiveSection(prevSection);
           const state = getKeyboardState({ section: prevSection, isMobile, });
-          gsap.to(kbd.scale, { ...state.scale, duration: 0.8, ease: "power2.out" });
-          gsap.to(kbd.position, { ...state.position, duration: 0.8, ease: "power2.out" });
-          gsap.to(kbd.rotation, { ...state.rotation, duration: 0.8, ease: "power2.out" });
+          gsap.to(kbd.scale, { ...state.scale, duration: 1 });
+          gsap.to(kbd.position, { ...state.position, duration: 1 });
+          gsap.to(kbd.rotation, { ...state.rotation, duration: 1 });
         },
       },
     });
@@ -190,18 +190,17 @@ const AnimatedBackground = () => {
       removePrevTweens();
       Object.values(SKILLS)
         .sort(() => Math.random() - 0.5)
-        .slice(0, 8) // Only animate 8 keys instead of all for performance
         .forEach((skill, idx) => {
           const keycap = splineApp.findObjectByName(skill.name);
           if (!keycap) return;
           const t = gsap.to(keycap.position, {
-            y: Math.random() * 150 + 150,
-            duration: Math.random() * 1.5 + 1.5,
-            delay: idx * 0.4,
+            y: Math.random() * 200 + 200,
+            duration: Math.random() * 2 + 2,
+            delay: idx * 0.6,
             repeat: -1,
             yoyo: true,
             yoyoEase: "none",
-            ease: "power2.out",
+            ease: "elastic.out(1,0.3)",
           });
           tweens.push(t);
         });
@@ -214,13 +213,13 @@ const AnimatedBackground = () => {
         if (!keycap) return;
         const t = gsap.to(keycap.position, {
           y: 0,
-          duration: 2,
+          duration: 4,
           repeat: 1,
-          ease: "power2.out",
+          ease: "elastic.out(1,0.7)",
         });
         tweens.push(t);
       });
-      setTimeout(removePrevTweens, 800);
+      setTimeout(removePrevTweens, 1000);
     };
 
     return { start, stop };
@@ -232,7 +231,7 @@ const AnimatedBackground = () => {
     if (!kbd) return;
 
     kbd.visible = false;
-    await sleep(300);
+    await sleep(400);
     kbd.visible = true;
     setKeyboardRevealed(true);
 
@@ -242,15 +241,15 @@ const AnimatedBackground = () => {
       { x: 0.01, y: 0.01, z: 0.01 },
       {
         ...currentState.scale,
-        duration: 1,
-        ease: "back.out(1.2)",
+        duration: 1.5,
+        ease: "elastic.out(1, 0.6)",
       }
     );
 
     const allObjects = splineApp.getAllObjects();
     const keycaps = allObjects.filter((obj) => obj.name === "keycap");
 
-    await sleep(600);
+    await sleep(900);
 
     if (isMobile) {
       const mobileKeyCaps = allObjects.filter((obj) => obj.name === "keycap-mobile");
@@ -258,19 +257,19 @@ const AnimatedBackground = () => {
     } else {
       const desktopKeyCaps = allObjects.filter((obj) => obj.name === "keycap-desktop");
       desktopKeyCaps.forEach(async (keycap, idx) => {
-        await sleep(idx * 40); // Reduced from 70ms
+        await sleep(idx * 70);
         keycap.visible = true;
       });
     }
 
     keycaps.forEach(async (keycap, idx) => {
       keycap.visible = false;
-      await sleep(idx * 40); // Reduced from 70ms
+      await sleep(idx * 70);
       keycap.visible = true;
       gsap.fromTo(
         keycap.position,
-        { y: 150 }, // Reduced from 200
-        { y: 50, duration: 0.4, delay: 0.05, ease: "power2.out" } // Simplified easing
+        { y: 200 },
+        { y: 50, duration: 0.5, delay: 0.1, ease: "bounce.out" }
       );
     });
   };
