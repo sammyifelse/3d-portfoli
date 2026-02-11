@@ -11,10 +11,11 @@ export default function AppOverlays() {
     <>
       <Particles
         className="fixed inset-0 -z-10 animate-fade-in"
-        quantity={30}
+        quantity={100}
       />
       <RemoteCursors />
       <EasterEggs />
+      <ElasticCursor />
       <RadialMenu />
     </>
   );
