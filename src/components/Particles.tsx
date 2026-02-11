@@ -22,6 +22,10 @@ export default function Particles({
 }: ParticlesProps) {
   const pathname = usePathname();
   const isBlogPost = pathname.startsWith("/blogs/") && pathname !== "/blogs";
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  
+  // Disable particles on mobile for performance
+  if (isMobile) return null;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);

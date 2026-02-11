@@ -44,7 +44,7 @@ const RemoteCursors = () => {
       pos: { x, y },
       socketId: socket.id,
     });
-  }, 200);
+  }, 500);
   useEffect(() => {
     if (isMobile) return;
     handleMouseMove(x, y);
