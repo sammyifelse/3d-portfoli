@@ -64,6 +64,19 @@ export default function RootLayout({
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
         ></Script>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          strategy="beforeInteractive"
+        ></Script>
+        <Script id="emailjs-init" strategy="beforeInteractive">
+          {`
+            (function(){
+              emailjs.init({
+                publicKey: "I7YUoT41-hhqVB--q",
+              });
+            })();
+          `}
+        </Script>
         {/* <Analytics /> */}
       </head>
       <body>

@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
@@ -22,19 +23,21 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_99ooe4d', // Replace with your EmailJS service ID
+        'template_1vilo8e', // Replace with your EmailJS template ID
+        {
+          from_name: fullName,
+          from_email: email,
+          message: message,
+          to_name: 'Samarjit', // Your name
         },
-        body: JSON.stringify({
-          fullName,
-          email,
-          message,
-        }),
-      });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
+        'I7YUoT41-hhqVB--q' // Your public key (already initialized in layout)
+      );
+
+      console.log('Email sent successfully:', result);
+      
       toast({
         title: "Thank you!",
         description: "I'll get back to you as soon as possible.",
@@ -50,16 +53,17 @@ const ContactForm = () => {
         clearTimeout(timer);
       }, 1000);
     } catch (err) {
+      console.error('Email sending failed:', err);
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: "Something went wrong! Please try again.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
         variant: "destructive",
       });
+      setLoading(false);
     }
-    setLoading(false);
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
