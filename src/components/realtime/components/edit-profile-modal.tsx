@@ -97,7 +97,7 @@ export const EditProfileModal = ({
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your name"
+              placeholder="Samarjit Thakuria"
               className={cn(
                 "w-full text-base font-semibold px-2 py-1 rounded-md border-none outline-none",
                 "bg-black/5 dark:bg-white/5 focus:bg-black/10 dark:focus:bg-white/10",

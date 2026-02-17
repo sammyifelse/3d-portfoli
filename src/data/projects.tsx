@@ -236,260 +236,149 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "codingducks",
-    category: "Coding platform",
-    title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/landing.png",
+    id: "ocean-data-ai-chatbot",
+    category: "AI/ML",
+    title: "Ocean Data AI Chatbot",
+    src: "/assets/projects-screenshots/ocean-data-ai-chatbot/landing.png",
     screenshots: ["landing.png"],
     skills: {
       frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.reactQuery,
-        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.node,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
         PROJECT_SKILLS.python,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.sockerio,
+        PROJECT_SKILLS.node,
       ],
     },
-    live: "https://www.codingducks.xyz/",
-    github: "https://github.com/Naresh-Khatri/Coding-Ducks",
+    live: "https://github.com/sammyifelse/OceanBase",
+    github: "https://github.com/sammyifelse/OceanBase",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            Coding ducks = LeetCode + CodePen + CSS Battles
+            LLM-powered dataset Q&A chatbot
           </TypographyP>
           <TypographyP className="font-mono ">
-            Coding Ducks is your coding dojo — where you level up your skills,
-            battle in real-time code duels, and earn badges like a true code
-            warrior. Track your progress, flex your brain, and climb the
-            leaderboard. Ready to quack the code?
+            Ocean Data AI Chatbot is an intelligent chatbot that leverages Large Language Models
+            to answer questions about oceanographic datasets. Built with a focus on user experience
+            and iterative improvement through continuous deployment cycles.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Problems </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">GenAI/LLM Integration</TypographyH3>
           <p className="font-mono mb-2">
-            Solve coding problems similar to LeetCode, enhancing your
-            problem-solving skills across various languages.
+            Integrated advanced GenAI and LLM capabilities for processing user queries,
+            experimenting with various prompts and workflows to optimize response accuracy.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/problems.png`,
-              `${BASE_PATH}/codingducks/problem.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Ducklets</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Modular REST APIs</TypographyH3>
           <p className="font-mono mb-2">
-            Collaborate in real-time with others in a multiplayer coding
-            environment, just like CodePen but with a social twist.
+            Built scalable and modular REST APIs using Python and Flask, with Node.js services
+            for enhanced performance. Implemented deploy/monitor/iterate cycles to continuously
+            refine responses and improve user experience.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/ducklets.png`,
-              `${BASE_PATH}/codingducks/ducklet1.png`,
-              `${BASE_PATH}/codingducks/ducklet2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">UI Battles </TypographyH3>
-
-          <p className="font-mono mb-2">
-            Challenge yourself to create UI components with HTML/CSS/JS, and get
-            instant feedback with an automated similarity scoring.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/css-battles.png`,
-              `${BASE_PATH}/codingducks/css-battle.png`,
-              `${BASE_PATH}/codingducks/css-battle2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Contests </TypographyH3>
-          <p className="font-mono mb-2">
-            Organize or participate in coding competitions. Successfully used to
-            host three contests during college.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/contests.png`]} />
-          <TypographyH3 className="my-4 mt-8">Playground </TypographyH3>
-          <p className="font-mono mb-2">
-            Test and execute your code instantly in my versatile online code
-            runner.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/playground.png`]} />
-          <TypographyH3 className="my-4 mt-8">Users</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Track your progress, earn badges, and climb the rankings with
-            detailed user profiles and activity tracking.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/users.png`,
-              `${BASE_PATH}/codingducks/user.png`,
-            ]}
-          />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Natural language processing for dataset queries</li>
+            <li>Real-time response generation with LLM</li>
+            <li>Continuous monitoring and performance optimization</li>
+            <li>Modular architecture for easy maintenance</li>
+          </ul>
         </div>
       );
     },
   },
   {
-    id: "couponluxury",
-    category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://www.couponluxury.com/",
+    id: "medcare-saas",
+    category: "Healthcare SaaS",
+    title: "MedCare SaaS Platform",
+    src: "/assets/projects-screenshots/medcare-saas/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://github.com/sammyifelse/Med-Care",
+    github: "https://github.com/sammyifelse/Med-Care",
     skills: {
       frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.vue,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
       ],
       backend: [
         PROJECT_SKILLS.node,
         PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.docker,
       ],
     },
     get content(): JSX.Element {
       return (
         <div>
           <TypographyP className="font-mono ">
-            CouponLuxury is your go-to destination for snagging the best deals
-            without lifting a finger. Whether you&apos;re hunting for the latest
-            discounts or trying to save a buck at your favorite stores,
-            CouponLuxury&apos;s got you covered.
+            MedCare is a comprehensive clinic management SaaS platform designed to streamline
+            healthcare operations. Built with modern web technologies and a focus on reliability,
+            automation, and user experience.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-4">
-            As soon as you land, boom! You&apos;re greeted with the freshest
-            coupons and top-tier deals that&apos;ll make your wallet happy.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/landing.png`]} />
-          <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">REST API Development</TypographyH3>
           <p className="font-mono mb-2">
-            Dive into a comprehensive list of stores, each packed with exclusive
-            deals and discounts. It&apos;s like having a VIP pass to every sale
-            in town.
+            Developed robust Node.js and Express APIs with comprehensive documentation.
+            Implemented test-driven development practices to ensure code quality and reliability.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/couponluxury/stores.png`,
-              `${BASE_PATH}/couponluxury/store.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
-
+          <TypographyH3 className="my-4 mt-8">Cloud Deployment & Monitoring</TypographyH3>
           <p className="font-mono mb-2">
-            Whatever you&apos;re into—fashion, tech, food—you&apos;ll find it
-            neatly organized here. No more endless scrolling; just pick a
-            category and get the best offers instantly.
+            Handled complete cloud deployment pipeline with continuous monitoring and debugging.
+            Implemented performance optimization strategies to ensure fast and reliable service delivery.
           </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/categories.png`]} />
-          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
-          <p className="font-mono mb-2">
-            Powered by Vue.js, this bad boy allows us to keep the content
-            dynamic and up-to-date. From flash sales to limited-time offers, my
-            CMS ensures everything&apos;s live and relevant.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/couponluxury/cms-1.png`,
-              `${BASE_PATH}/couponluxury/cms-2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-5">
-            Plus, I&apos;ve sprinkled in some extra magic like personalized
-            deal recommendations, user-friendly search features, and a sleek,
-            responsive design that works like a charm on any device.
-          </p>
-          <p className="font-mono mb-2">
-            CouponLuxury isn&apos;t just a website; it&apos;s your personal deal-hunting
-            assistant, ensuring you never miss out on a bargain!
-          </p>
-          {/* <TypographyP className="my-4 mt-8">
-          <strong>Misc:</strong>
-          Hosted not one, not two, but THREE coding contests (Codemacha) during
-          college. Safe to say, Coding Ducks passed the vibe check.
-        </TypographyP>
-        <TypographyP className="my-4 mt-8">
-          <strong>Target Audience:</strong>
-          For all the novice coders out there ready to make their mark.
-        </TypographyP> */}
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Clinic management and scheduling</li>
+            <li>Patient record management</li>
+            <li>Test-driven UI with automated workflows</li>
+            <li>Cloud-based infrastructure</li>
+            <li>Performance monitoring and debugging tools</li>
+          </ul>
         </div>
       );
     },
   },
   {
-    id: "the-booking-desk",
-    category: "Travel",
-    title: "The Booking Desk",
-    src: "/assets/projects-screenshots/the-booking-desk/landing.png",
-    screenshots: ["1.png"],
-    live: "https://thebookingdesk.com/",
+    id: "network-intrusion-detection",
+    category: "Machine Learning",
+    title: "Network Intrusion Detection",
+    src: "/assets/projects-screenshots/network-intrusion-detection/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://drive.google.com/drive/folders/1ZYud0bmziBeZ_BBu2w7NP-bWe2QlX1AW",
     skills: {
       frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.python,
       ],
-      backend: [PROJECT_SKILLS.sanity],
+      backend: [
+        PROJECT_SKILLS.python,
+      ],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            The Booking Desk is your ultimate travel consultation hub, designed
-            to turn your wanderlust dreams into reality. With a focus on smooth
-            and visually captivating animations, navigating the site feels like
-            a breeze—it&apos;s almost as if the destinations are calling you.
+            A machine learning-based real-time network intrusion detection system that monitors
+            network traffic and identifies potential security threats using advanced anomaly
+            detection algorithms.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-8">
-            A sleek, modern interface greets you, featuring the latest travel
-            tips, deals, and must-visit spots around the globe.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/the-booking-desk/landing.png`]} />
-          <TypographyH3 className="my-4 mt-8">Blogs</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Feature Extraction</TypographyH3>
           <p className="font-mono mb-2">
-            Dive into the curated articles written by travel experts. Whether
-            you&apos;re looking for hidden gems or travel hacks, our blog section has
-            you covered.
+            Implemented sophisticated feature extraction techniques using Python to analyze
+            network traffic patterns and identify key indicators of potential intrusions.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/the-booking-desk/blogs.png`,
-              `${BASE_PATH}/the-booking-desk/blog.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Sanity CMS</TypographyH3>
-
+          <TypographyH3 className="my-4 mt-8">Anomaly Detection Models</TypographyH3>
           <p className="font-mono mb-2">
-            Keeping everything fresh and up-to-date, I&apos;ve integrated Sanity CMS
-            to manage all the content with ease, ensuring you always get the
-            latest and greatest information.
+            Developed and trained machine learning models for anomaly detection with SQL-based
+            data management. Conducted iterative model tuning and evaluation to improve detection
+            accuracy and reduce false positives.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/the-booking-desk/cms-1.png`,
-              `${BASE_PATH}/the-booking-desk/cms-2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 my-8">
-            With a stunning 100% score on Lighthouse, The Booking Desk isn&apos;t
-            just beautiful—it&apos;s built to perform. Whether you&apos;re planning your
-            next adventure or just daydreaming, our site delivers a top-notch
-            experience that&apos;s both informative and enjoyable.
-          </p>
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Real-time network traffic monitoring</li>
+            <li>Advanced anomaly detection algorithms</li>
+            <li>SQL-based data storage and analysis</li>
+            <li>Continuous model improvement through iteration</li>
+            <li>Performance metrics and evaluation tools</li>
+          </ul>
         </div>
       );
     },

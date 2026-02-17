@@ -24,6 +24,7 @@ export enum SkillNames {
   AWS = "aws",
   VIM = "vim",
   VERCEL = "vercel",
+  PYTHON = "python",
 }
 export type Skill = {
   id: number;
@@ -233,6 +234,14 @@ using use = useUsing("use")`,
     color: "#6cc24a",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   },
+  [SkillNames.PYTHON]: {
+    id: 25,
+    name: "python",
+    label: "Python",
+    shortDescription: "Snaking through code with that clean syntax! 🐍✨",
+    color: "#3776ab",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
 };
 
 export type Experience = {
@@ -248,40 +257,35 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "Dec 2024",
-    endDate: "Present",
-    title: "Full Stack Engineer",
-    company: "OmniNexus",
+    startDate: "May 2024",
+    endDate: "Aug 2024",
+    title: "Software Development Intern",
+    company: "Hexbit (Remote)",
     description: [
-      "Developing scalable full-stack applications involved in complex systems.",
-      "Optimizing database performance and query efficiency.",
-      "Collaborating on architectural decisions and technical strategy.",
+      "Built, tested, and deployed full-stack modules (Python, Node.js, React) used by 500+ users.",
+      "Prototyped and integrated AI-driven and automated features into existing product workflows.",
+      "Used Git and agile collaboration for debugging, monitoring, and rapid iteration.",
     ],
     skills: [
-      SkillNames.NEXTJS,
-      SkillNames.TS,
-      SkillNames.POSTGRES,
-      SkillNames.DOCKER,
-      SkillNames.AWS,
+      SkillNames.PYTHON,
+      SkillNames.NODEJS,
+      SkillNames.REACT,
+      SkillNames.GIT,
     ],
   },
   {
     id: 2,
-    startDate: "Apr 2022",
-    endDate: "Dec 2024",
-    title: "Freelance Developer",
-    company: "Live & Learn",
+    startDate: "2023",
+    endDate: "Present",
+    title: "Backend Developer",
+    company: "Plone Foundation (Remote)",
     description: [
-      "Delivered custom web solutions for diverse clients.",
-      "Managed full project lifecycles from design to deployment.",
-      "Maintained high client satisfaction through effective communication.",
+      "Enhanced Python-based CMS APIs and data flows, focusing on reliability and secure automation.",
+      "Contributed to continuous documentation, feature iteration, and bugfix deployment.",
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.NODEJS,
-      SkillNames.MONGODB,
-      SkillNames.TAILWIND,
-      SkillNames.WORDPRESS,
+      SkillNames.PYTHON,
+      SkillNames.GIT,
     ],
   },
 ];

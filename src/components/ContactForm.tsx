@@ -68,7 +68,7 @@ const ContactForm = () => {
           <Label htmlFor="fullname">Full name</Label>
           <Input
             id="fullname"
-            placeholder="Your Name"
+            placeholder="Samarjit Thakuria"
             type="text"
             required
             value={fullName}
