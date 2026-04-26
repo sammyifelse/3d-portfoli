@@ -40,7 +40,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
         href={live}
       >
         <Button variant={"default"} size={"sm"}>
-          Visit Website
+          Preview Video
           <ArrowUpRight className="ml-3 w-5 h-5" />
         </Button>
       </Link>
@@ -247,6 +247,9 @@ const projects: Project[] = [
         PROJECT_SKILLS.node,
       ],
       backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.prisma,
         PROJECT_SKILLS.python,
         PROJECT_SKILLS.node,
       ],
@@ -257,7 +260,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            LLM-powered dataset Q&A chatbot
+            Ocean AI Chatbot
           </TypographyP>
           <TypographyP className="font-mono ">
             Ocean Data AI Chatbot is an intelligent chatbot that leverages Large Language Models
@@ -282,6 +285,122 @@ const projects: Project[] = [
             <li>Real-time response generation with LLM</li>
             <li>Continuous monitoring and performance optimization</li>
             <li>Modular architecture for easy maintenance</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
+    id: "fraudguard",
+    category: "Machine Learning",
+    title: "FraudGuard – ML Powered Transaction Security",
+    src: "/assets/projects-screenshots/fraudguard/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://github.com/yourusername/fraudguard",
+    github: "https://github.com/sammyifelse/hackth",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Advanced AI-powered fraud detection platform for real-time analysis of 250K+ transactions with 99.8%+ accuracy.
+             Multi-provider AI support, interactive analytics, and
+              modern UI/UX—all in one scalable, production-ready solution.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <p className="font-mono mb-2">
+            AI-driven dashboard integrating Google Gemini for natural language fraud explanations and real-time transaction monitoring. Implemented a multi-
+            model ensemble of Random Forest and Isolation Forest to achieve sub-100ms response times, featuring Docker-ready scalability and automated behavioral anomaly detection across diverse financial datasets.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Google Gemini Integration: Natural language fraud explanations</li>
+            <li>Multiple Formats: Credit Card, UPI, Bank Transfers, E-commerce</li>
+            <li>Production Deployment: Docker & cloud-ready</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
+    id: "network-intrusion-detection",
+    category: "Machine Learning",
+    title: "Network Intrusion Detection",
+    src: "/assets/projects-screenshots/network-intrusion-detection/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://drive.google.com/drive/folders/1ZYud0bmziBeZ_BBu2w7NP-bWe2QlX1AW",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.python,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A machine learning-based real-time network intrusion detection system that monitors
+            network traffic and identifies potential security threats using advanced anomaly
+            detection algorithms.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Feature Extraction</TypographyH3>
+          <p className="font-mono mb-2">
+            Implemented sophisticated feature extraction techniques using Python to analyze
+            network traffic patterns and identify key indicators of potential intrusions.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Anomaly Detection Models</TypographyH3>
+          <p className="font-mono mb-2">
+            Developed and trained machine learning models for anomaly detection with SQL-based
+            data management. Conducted iterative model tuning and evaluation to improve detection
+            accuracy and reduce false positives.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Real-time network traffic monitoring</li>
+            <li>Advanced anomaly detection algorithms</li>
+            <li>SQL-based data storage and analysis</li>
+            <li>Continuous model improvement through iteration</li>
+            <li>Performance metrics and evaluation tools</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
+    id: "resumepard",
+    category: "AI/ML",
+    title: "ResumePard - AI-Powered Resume Matcher",
+    src: "/assets/projects-screenshots/resumepard/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://github.com/yourusername/resumepard",
+    github: "https://github.com/sammyifelse/ResumePard",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            ResumePard is a comprehensive Python-based system for automated resume parsing, job description analysis, and intelligent candidate ranking.
+             Built with advanced NLP capabilities using spaCy, it provides HR professionals and recruitment agencies with powerful tools to streamline the hiring process.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <p className="font-mono mb-2">
+            Engineered a multi-format parsing engine and ranking system to facilitate
+             data-driven candidate evaluation and reporting.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
+            <li>Multi-format Resume Parsing: Support for PDF, DOCX, and TXT files</li>
+            <li>Advanced NLP Processing: Powered by spaCy for intelligent text analysis</li>
+            <li>Contact Information Extraction: Automated extraction of names, emails, phone numbers, and LinkedIn profiles</li>
           </ul>
         </div>
       );
@@ -331,53 +450,6 @@ const projects: Project[] = [
             <li>Test-driven UI with automated workflows</li>
             <li>Cloud-based infrastructure</li>
             <li>Performance monitoring and debugging tools</li>
-          </ul>
-        </div>
-      );
-    },
-  },
-  {
-    id: "network-intrusion-detection",
-    category: "Machine Learning",
-    title: "Network Intrusion Detection",
-    src: "/assets/projects-screenshots/network-intrusion-detection/landing.png",
-    screenshots: ["landing.png"],
-    live: "https://drive.google.com/drive/folders/1ZYud0bmziBeZ_BBu2w7NP-bWe2QlX1AW",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.python,
-      ],
-      backend: [
-        PROJECT_SKILLS.python,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A machine learning-based real-time network intrusion detection system that monitors
-            network traffic and identifies potential security threats using advanced anomaly
-            detection algorithms.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Feature Extraction</TypographyH3>
-          <p className="font-mono mb-2">
-            Implemented sophisticated feature extraction techniques using Python to analyze
-            network traffic patterns and identify key indicators of potential intrusions.
-          </p>
-          <TypographyH3 className="my-4 mt-8">Anomaly Detection Models</TypographyH3>
-          <p className="font-mono mb-2">
-            Developed and trained machine learning models for anomaly detection with SQL-based
-            data management. Conducted iterative model tuning and evaluation to improve detection
-            accuracy and reduce false positives.
-          </p>
-          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
-          <ul className="list-disc list-inside font-mono mb-2 space-y-2">
-            <li>Real-time network traffic monitoring</li>
-            <li>Advanced anomaly detection algorithms</li>
-            <li>SQL-based data storage and analysis</li>
-            <li>Continuous model improvement through iteration</li>
-            <li>Performance metrics and evaluation tools</li>
           </ul>
         </div>
       );
@@ -445,143 +517,6 @@ const projects: Project[] = [
           <p className="font-mono mb-2 mt-8 text-center">
             This site&apos;s not just a portfolio — it&apos;s a whole vibe.
           </p>
-        </div>
-      );
-    },
-  },
-  {
-    id: "ghostchat",
-    category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    live: "https://ghostchat.vercel.app",
-    github:"https://github.com/Naresh-Khatri/GhostChat",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
-      backend: [PROJECT_SKILLS.supabase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Ghostchat is your go-to spot for sending anonymous messages without
-            leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-            low-key and secure. Whether you&apos;re sharing secrets, giving feedback,
-            or just having some fun, Ghostchat ensures your identity stays
-            hidden, while your voice is heard. Say what you want, without the
-            worry.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/ghostchat/1.png`,
-              `${BASE_PATH}/ghostchat/2.png`,
-              `${BASE_PATH}/ghostchat/3.png`,
-              `${BASE_PATH}/ghostchat/4.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  {
-    id: "jra",
-    category: "Result analyzer",
-    title: "JNTUA Results Analyzer",
-    src: "/assets/projects-screenshots/jra/1.png",
-    screenshots: ["1.png"],
-    live: "https://naresh-khatri.github.io/JNTUA-result-analyser-spa/#/",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.vue],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.mongo,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.docker,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            JNTUA Results Analyzer was a revolutionary tool designed to simplify
-            and enhance the experience of accessing academic results. It served
-            as a powerful proxy between the JNTUA university results website and
-            its users, offering a range of features that made result analysis
-            faster and more efficient. Here&apos;s what made it stand out:
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/jra/1.png`]} />
-          <TypographyH3 className="my-4 mt-8">
-            Effortless Results Retrieval
-          </TypographyH3>
-          {/* Effortless Results Retrieval: */}
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Search all your results using a single roll number, eliminating
-              the tedious task of sifting through thousands of rows on the
-              official site.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Class-Wise Results:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              class-wise results effortlessly by entering a roll number range.
-              No more manual searches or filtering.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Faculty Features:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Faculty members could download batch results in Excel format,
-              making administrative tasks a breeze.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">
-            Enhanced Data Insights:
-          </TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Each result came with additional features including:
-              <ul className="list-disc font-mono ml-6">
-                <li>
-                  <strong>CGPA Calculations: </strong>Easily track your
-                  cumulative grade point average.
-                </li>
-                <li>
-                  <strong>Charts:</strong> Visualize your academic performance
-                  with comprehensive charts.
-                </li>
-                <li>
-                  <strong>Future Projections:</strong> Get insights into
-                  potential future outcomes based on current performance.
-                </li>
-                <li>
-                  <strong> Backlog Counts: </strong>Keep track of your backlog
-                  subjects at a glance.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Performance:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              The application was significantly faster and more efficient than
-              the official site, providing a smoother user experience.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Downfall:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Unfortunately, as of May 2022, the tool stopped working due to the
-              introduction of CAPTCHA on the official JNTUA results site, which
-              disrupted the seamless functionality of the app. JNTUA Results
-              Analyzer transformed the way students and faculty interacted with
-              academic results, making it a must-have tool until its unexpected
-              shutdown.
-            </li>
-          </ul>
         </div>
       );
     },
