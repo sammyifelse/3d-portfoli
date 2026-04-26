@@ -35,7 +35,6 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
     linkedin: "https://www.linkedin.com/in/samarjit-thakuria-96450727b/",
     instagram: "https://www.instagram.com/somarjeet.thakuria/",
     facebook: "https://www.facebook.com",

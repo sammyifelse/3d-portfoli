@@ -1,0 +1,44 @@
+---
+title: "MedCare Post-Mortem: The Hardest Bug I Fixed"
+publishedAt: "2026-04-20"
+summary: "A breakdown of the most difficult bug in MedCare, why it happened, and how I redesigned the flow to prevent it."
+author: "Samarjit Thakuria"
+tags: ["project-deep-dive", "debugging", "architecture", "medcare"]
+---
+
+# MedCare Post-Mortem: The Hardest Bug I Fixed
+
+The ugliest bug in MedCare looked random at first: appointment confirmations failed for some users, but only during peak traffic windows. Logs were noisy, retries masked the issue, and everything looked fine in local testing.
+
+## What was actually broken
+
+The failure came from a race condition between:
+
+- the API endpoint that reserved a slot,
+- a worker that sent confirmation emails,
+- and a cache write that marked the slot as unavailable.
+
+On rare timing windows, the email worker used stale state and sent a confirmation for a slot that had already been re-assigned.
+
+## Why this was hard to catch
+
+The system was eventually consistent by design, and every individual service looked "correct" in isolation. The bug only appeared when cross-service timing aligned badly.
+
+## How I fixed it
+
+I changed the workflow to a single source of truth around reservation state:
+
+1. Move slot reservation and confirmation token creation into one transactional boundary.
+2. Emit idempotent events with a reservation version.
+3. Make workers reject out-of-date versions.
+4. Add structured tracing for each reservation lifecycle.
+
+## What changed after the fix
+
+- Duplicate confirmations dropped to zero in load tests.
+- Incident triage became much faster because traces were coherent.
+- The architecture became easier to reason about for new contributors.
+
+## Key lesson
+
+The best bug fixes are often architecture fixes. If a system can produce two truths at once, retries only hide the problem.

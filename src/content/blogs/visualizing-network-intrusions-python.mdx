@@ -1,0 +1,45 @@
+---
+title: "Visualizing Network Intrusions with Python"
+publishedAt: "2026-04-15"
+summary: "A tutorial approach to turn intrusion detection signals into understandable visual stories."
+author: "Samarjit Thakuria"
+tags: ["tutorial", "python", "security", "data-visualization"]
+---
+
+# Visualizing Network Intrusions with Python
+
+Raw security logs are hard to interpret quickly. Visualization turns noisy event streams into patterns your team can act on.
+
+## Dataset and baseline pipeline
+
+I start with structured records like:
+
+- timestamp,
+- source and destination IP,
+- protocol,
+- anomaly score,
+- attack label if available.
+
+Then I clean missing values, normalize time zones, and group by attack windows.
+
+## Useful visualizations
+
+1. Time series of anomaly spikes per protocol.
+2. Heatmap of source subnet vs target service.
+3. Node-link graph for suspicious communication clusters.
+
+## Why Python works well
+
+Python lets you move fast with data tooling:
+
+- Pandas for transformation,
+- Matplotlib and Seaborn for baseline charts,
+- Plotly for interactive drill-down.
+
+## Common pitfall
+
+Do not overfit your visuals to one known attack type. Good dashboards help analysts explore unknown behavior too.
+
+## Next step
+
+Connect visualization output to alerting thresholds so insights become operational actions, not just pretty charts.

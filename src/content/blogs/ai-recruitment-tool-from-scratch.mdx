@@ -1,0 +1,45 @@
+---
+title: "How to Build an AI-Powered Recruitment Tool from Scratch"
+publishedAt: "2026-04-16"
+summary: "A blueprint for building candidate ranking workflows with responsible AI and reliable APIs."
+author: "Samarjit Thakuria"
+tags: ["tutorial", "ai", "recruitment", "system-design"]
+---
+
+# How to Build an AI-Powered Recruitment Tool from Scratch
+
+This is the practical architecture I use when building recruitment tools that parse resumes, score fit, and expose transparent outputs.
+
+## Step 1: Define your scoring model before writing code
+
+List dimensions such as skill match, experience depth, role alignment, and communication signals. Start simple with weighted rules, then add model-assisted scoring.
+
+## Step 2: Build ingestion and normalization
+
+- Upload resume files.
+- Extract text safely.
+- Normalize education, skills, and timeline fields.
+
+A clean normalized schema is the foundation for good ranking quality.
+
+## Step 3: Add explainable ranking
+
+Do not return only a score. Return reasons:
+
+- matched requirements,
+- missing critical skills,
+- confidence level per signal.
+
+## Step 4: Keep humans in the loop
+
+Use AI to prioritize, not to make final hiring decisions. Add reviewer feedback loops so rankings improve over time.
+
+## Step 5: Production hardening
+
+- Audit logs for every scoring request.
+- Rate limits and abuse protection.
+- Model version tracking and rollback strategy.
+
+## Final note
+
+Recruitment systems affect real people. Reliability, transparency, and fairness should be first-class engineering requirements.

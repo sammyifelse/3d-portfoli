@@ -1,0 +1,44 @@
+---
+title: "ResumePard Architecture Notes: Why FastAPI Over Express"
+publishedAt: "2026-04-19"
+summary: "The practical tradeoffs I made while choosing FastAPI for ResumePard, and where Express would still be a better fit."
+author: "Samarjit Thakuria"
+tags: ["project-deep-dive", "fastapi", "express", "backend"]
+---
+
+# ResumePard Architecture Notes: Why FastAPI Over Express
+
+When I started ResumePard, I tested both Express and FastAPI before locking in the backend stack.
+
+## What the product needed
+
+ResumePard parses resumes, ranks candidates, and exposes APIs for structured profile output. That meant:
+
+- strict request and response contracts,
+- reliable validation,
+- clean async processing,
+- fast iteration for model-backed endpoints.
+
+## Why FastAPI won this time
+
+FastAPI gave me strong defaults for typed schemas and validation through Pydantic. I spent less time writing repetitive guards and more time building business logic.
+
+The automatic OpenAPI docs were also useful when integrating with the frontend and testing tools.
+
+## Where Express was still strong
+
+Express still shines when:
+
+- your team is all-in on JavaScript,
+- you need broad middleware flexibility,
+- or you are already running a mature Node ecosystem around the service.
+
+## What I optimized after choosing FastAPI
+
+1. Separated model orchestration from HTTP layer.
+2. Added background task queues for expensive parsing.
+3. Introduced schema versioning for safer API evolution.
+
+## Final takeaway
+
+There is no universal winner. FastAPI matched ResumePard because type-first APIs and rapid AI integration mattered more than JavaScript ecosystem convenience.
