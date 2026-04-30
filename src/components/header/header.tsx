@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import FunnyThemeToggle from "../theme/funny-theme-toggle";
 import { Button } from "../ui/button";
 import { config } from "@/data/config";
+import LikeButton from "../like-button";
 
 interface HeaderProps {
   loader?: boolean;
@@ -52,7 +53,10 @@ const Header = ({ loader }: HeaderProps) => {
           </Button>
         </Link>
 
-        <FunnyThemeToggle className="w-6 h-6 mr-4 hidden md:flex" />
+        <div className="flex items-center gap-3 mr-4">
+          <FunnyThemeToggle className="w-6 h-6 hidden md:flex" />
+          <LikeButton />
+        </div>
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}
