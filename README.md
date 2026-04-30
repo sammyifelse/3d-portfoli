@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This is where I showcase my full-stack development projects, technical insights, and competitive programming journey. The site features immersive 3D animations, interactive experiences, and a growing blog focused on establishing authority through project deep dives, learning in public, open source insights, and practical technical tutorials.
 
-![Portfolio Preview](https://github.com/Naresh-Khatri/3d-portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+![Portfolio Preview](https://github.com/sammyifelse/3d-portfoli/blob/main/public/assets/projects-screenshots/portfolio/landing.png)
 
 ## 🔥 Features
 
