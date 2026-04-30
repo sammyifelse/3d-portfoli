@@ -1,74 +1,149 @@
-# 🚀 My Portfolio Website
+# 🚀 Samarjit Thakuria | Full-Stack Developer Portfolio
 
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design, you're in the right place.
+Welcome to my personal portfolio website! This is where I showcase my full-stack development projects, technical insights, and competitive programming journey. The site features immersive 3D animations, interactive experiences, and a growing blog focused on establishing authority through project deep dives, learning in public, open source insights, and practical technical tutorials.
 
-![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+![Portfolio Preview](https://github.com/Naresh-Khatri/3d-portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
 
 ## 🔥 Features
 
-- **3D Animations**: Custom-made interactive keyboard using Spline with skills as keycaps that reveal titles and descriptions on hover.
-- **Slick Interactions**: Powered by GSAP and Framer Motion for smooth animations on scroll, hover, and element reveal.
-- **Space Theme**: Particles on a dark background to simulate a cosmic environment, making the experience out of this world.
-- **Responsive Design**: Fully responsive across all devices to ensure the best user experience.
-- **Innovative Web Design**: Combining creativity with functionality to push the boundaries of modern web design.
+- **3D Immersive Design**: Interactive 3D elements and animations using Spline Runtime bringing the portfolio to life.
+- **Smooth Interactions**: Powered by GSAP and Framer Motion for elegant animations on scroll, hover, and reveal effects.
+- **Authority-Driven Blog**: Deep technical articles including:
+  - Project post-mortems from real products (MedCare, ResumePard)
+  - Learning in public: 500+ competitive programming problems journey
+  - Open source contributions: Student perspective on Plone
+  - Practical tutorials: AI-powered systems and data visualization
+- **Interactive Projects**: Showcase of real-world applications with architecture insights and lessons learned.
+- **Live Like Counter**: Community engagement with persistent like tracking per device.
+- **Newsletter Hub**: Curated technical content and updates organized by category.
+- **Responsive Design**: Optimized for all devices with smooth performance.
+- **Dark Mode**: Built-in theme toggle for comfortable viewing.
+
+## 📚 Featured Projects
+
+- **MedCare**: AI-powered healthcare platform with real-time appointment systems
+- **ResumePard**: Intelligent resume parsing and candidate ranking with FastAPI backend
+- **The Booking Desk**: Full-featured booking and scheduling system
+- **Ghost Chat**: Real-time collaborative chat application
+- **Network Intrusion Detection**: Python-based security analysis tool
+- **Ocean Data AI Chatbot**: Intelligence system for oceanic research
+- And more...
+
+## 🔗 Blog Categories
+
+- **Project Deep Dives**: Architecture decisions, hardest bugs, and "why we chose X over Y"
+- **Learning in Public**: Algorithm mastery, competitive programming insights
+- **Open Source Insights**: Journey from student contributor to productive community member
+- **Technical Tutorials**: From-scratch builds and practical implementation guides
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS, Shadcn, Aceternity UI
-- **Animations**: GSAP, Framer Motion, Spline Runtime
-- **Misc**: Resend, Socketio, Zod
+- **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
+- **UI Libraries**: Shadcn UI, Aceternity UI, Lucide Icons
+- **Animations**: GSAP, Framer Motion, Motion
+- **3D**: Spline Runtime
+- **Backend/APIs**: Node.js, Resend (email), Socket.io (real-time)
+- **Content**: MDX with gray-matter for blog posts
+- **Development**: Lenis (smooth scroll), Zod (validation), SCSS
+- **Deployment**: Built for Netlify/Vercel
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v14+)
-- npm or yarn
+- Node.js (v16+)
+- pnpm, npm, or yarn
 
 ### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Naresh-Khatri/Portfolio.git
+    git clone https://github.com/Naresh-Khatri/3d-portfolio.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd Portfolio
+    cd 3d-portfolio
     ```
 
 3. Install dependencies:
 
     ```bash
-    npm install
+    pnpm install
     # or
-    yarn install
+    npm install
     ```
 
-4. Run the development server:
+4. Set up environment variables:
+   Create a `.env.local` file in the root directory:
+
+    ```env
+    RESEND_API_KEY=your_resend_api_key_here
+    ```
+
+5. Run the development server:
 
     ```bash
-    npm run dev
+    pnpm dev
     # or
-    yarn dev
+    npm run dev
     ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the magic!
+6. Open [http://localhost:3000](http://localhost:3000) in your browser!
+
+## 📝 Blog System
+
+Blog posts are stored as MDX files in `src/content/blogs/`. Each post includes:
+- Title, publication date, summary
+- Author and tags
+- Full content with code examples and visuals
+
+Create new posts by adding `.mdx` files with YAML frontmatter:
+
+```mdx
+---
+title: "Your Post Title"
+publishedAt: "2026-04-26"
+summary: "Brief summary of your post"
+author: "Your Name"
+tags: ["tag1", "tag2"]
+---
+
+# Your content here...
+```
+
+## 🌐 Environment Variables
+
+- `RESEND_API_KEY`: Email service API key for contact form
 
 ## 🚀 Deployment
 
-This site is deployed on Vercel. For your own deployment, follow these steps:
+### Netlify
 
-1. Push your code to a GitHub repository.
-2. Connect your repository to Vercel.
-3. Vercel will handle the deployment process.
+1. Connect your GitHub repository to Netlify
+2. Add environment variable `RESEND_API_KEY` in site settings
+3. Deploy!
+
+### Vercel
+
+1. Connect your GitHub repository to Vercel
+2. Add environment variable `RESEND_API_KEY` in project settings
+3. Deploy with automatic GitHub integration!
 
 ## 🤝 Contributing
 
-If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
+Found a bug or have suggestions? Feel free to open an issue or submit a pull request. Contributions are always welcome!
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Portfolio**: [saamarjitt.netlify.app](https://saamarjitt.netlify.app)
+
+**Social**: [GitHub](https://github.com/sammyifelse) | [LinkedIn](https://www.linkedin.com/in/samarjit-thakuria-96450727b/) | [Instagram](https://www.instagram.com/somarjeet.thakuria/)
+
+Made with ❤️ by Samarjit Thakuria
