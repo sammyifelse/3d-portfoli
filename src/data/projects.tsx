@@ -30,7 +30,15 @@ import {
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
 
-const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
+ const ProjectsLinks = ({
+  live,
+  repo,
+  primaryLabel = "Visit Website",
+}: {
+  live: string;
+  repo?: string;
+  primaryLabel?: string;
+}) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-start gap-3 my-3 mb-8">
       <Link
@@ -40,7 +48,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
         href={live}
       >
         <Button variant={"default"} size={"sm"}>
-          Preview Video
+          {primaryLabel}
           <ArrowUpRight className="ml-3 w-5 h-5" />
         </Button>
       </Link>
@@ -267,7 +275,7 @@ const projects: Project[] = [
             to answer questions about oceanographic datasets. Built with a focus on user experience
             and iterative improvement through continuous deployment cycles.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
+          <ProjectsLinks live={this.live} repo={this.github} primaryLabel="Preview Video" />
           <TypographyH3 className="my-4 mt-8">GenAI/LLM Integration</TypographyH3>
           <p className="font-mono mb-2">
             Integrated advanced GenAI and LLM capabilities for processing user queries,
@@ -310,7 +318,11 @@ const projects: Project[] = [
              Multi-provider AI support, interactive analytics, and
               modern UI/UX—all in one scalable, production-ready solution.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
+          <ProjectsLinks
+            live={this.live}
+            repo={this.github}
+            primaryLabel="Preview Video"
+          />
           <p className="font-mono mb-2">
             AI-driven dashboard integrating Google Gemini for natural language fraud explanations and real-time transaction monitoring. Implemented a multi-
             model ensemble of Random Forest and Isolation Forest to achieve sub-100ms response times, featuring Docker-ready scalability and automated behavioral anomaly detection across diverse financial datasets.
@@ -378,7 +390,7 @@ const projects: Project[] = [
     title: "ResumePard - AI-Powered Resume Matcher",
     src: "/assets/projects-screenshots/resumepard/landing.png",
     screenshots: ["landing.png"],
-    live: "https://github.com/yourusername/resumepard",
+    live: "https://www.loom.com/share/56f2522c8af34928b4304d4e14480d4d",
     github: "https://github.com/sammyifelse/ResumePard",
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind],
@@ -391,7 +403,11 @@ const projects: Project[] = [
             ResumePard is a comprehensive Python-based system for automated resume parsing, job description analysis, and intelligent candidate ranking.
              Built with advanced NLP capabilities using spaCy, it provides HR professionals and recruitment agencies with powerful tools to streamline the hiring process.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
+          <ProjectsLinks
+            live={this.live}
+            repo={this.github}
+            primaryLabel="Preview Video"
+          />
           <p className="font-mono mb-2">
             Engineered a multi-format parsing engine and ranking system to facilitate
              data-driven candidate evaluation and reporting.
